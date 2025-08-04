@@ -8,7 +8,7 @@
         />
         <span class="fs-60 bold">prirodzenenajlepsi</span>
       </div>
-      <span class="fs-70 heading3"> majú dnes tieto školenia:</span>
+      <span class="fs-60 heading3"> majú dnes tieto školenia:</span>
     </div>
     <div class="tb-logo">
       <img
@@ -17,7 +17,7 @@
     </div>
     <div class="events">
       <div v-for="event in longPollingStore.events" :key="event.id" class="row">
-        <div class="col-xs-12 fs-70 bold">{{ event.start }} &#8212; {{ event.location }}: {{ event.subject }}</div>
+        <div class="col-xs-12 fs-50 bold">{{ event.start }} &#8212; {{ event.location }}: {{ event.subject }}</div>
       </div>
     </div>
   </div>
@@ -25,7 +25,6 @@
 
 <script>
 import { reactive, toRefs, onMounted } from 'vue'
-import { api } from 'src/boot/axios'
 import { useLongPollingStore } from '../stores/LongPollingStore.js'
 
 export default {
@@ -52,11 +51,15 @@ export default {
 
 <style scoped>
 .fs-60 {
-  font-size: 60px;
+  font-size: 45px;
 }
 
 .fs-70 {
-  font-size: 70px;
+  font-size: 60px;
+}
+
+.fs-50 {
+  font-size: 30px;
 }
 
 .bold {
