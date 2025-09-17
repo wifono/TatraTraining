@@ -17,7 +17,7 @@
     </div>
     <div class="events">
       <div v-for="event in longPollingStore.events" :key="event.id" class="row">
-        <div class="col-xs-12 fs-50 bold">{{ event.start }} &#8212; {{ event.location }}: {{ event.subject }}</div>
+        <div class="col-xs-12 fs-50 bold">{{ event.location }}: {{ event.subject }}</div>
       </div>
     </div>
   </div>
@@ -39,6 +39,10 @@ export default {
 
     onMounted(async () => {
       longPollingStore.start()
+
+      setInterval(() => {
+        location.reload()
+      }, 30 * 60 * 1000)
     })
 
     return {
@@ -51,15 +55,15 @@ export default {
 
 <style scoped>
 .fs-60 {
-  font-size: 45px;
+  font-size: 70px;
 }
 
 .fs-70 {
-  font-size: 60px;
+  font-size: 80px;
 }
 
 .fs-50 {
-  font-size: 30px;
+  font-size: 60px;
 }
 
 .bold {
