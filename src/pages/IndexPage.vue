@@ -55,15 +55,15 @@ export default {
 
 <style scoped>
 .fs-60 {
-  font-size: 70px;
+  font-size: 100px;
 }
 
 .fs-70 {
-  font-size: 80px;
+  font-size: 110px;
 }
 
 .fs-50 {
-  font-size: 60px;
+  font-size: 90px;
 }
 
 .bold {
@@ -103,7 +103,7 @@ body {
 .events {
   line-height: 1.125;
   position: absolute;
-  top: 350px;
+  top: 380px;
   left: 100px;
 }
 #wrap {
